@@ -1,0 +1,50 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Eczar&family=Newsreader:opsz@6..72&family=Noto+Color+Emoji&family=Quicksand:wght@400;500;600&family=Roboto+Condensed:ital,wght@0,500;0,600;1,400&display=swap');
+
+:root {
+  /* colors */
+  --background: #dad7cdff;
+  --accent: #588157ff;
+  --main: #344e41ff;
+  --borders: #a3b18aff;
+  --button: #d9926bff;
+  --secondary-accent: #3a5a40ff;
+
+
+  /* font families */
+  --ff-base: "Roboto Condensed", sans-serif;
+  --ff-accent: "Quicksand", sans-serif;
+
+  /* font weight */
+  --fw-regular: 500;
+  --fw-bold: 600;
+  --fw-black: 700;
+
+  /* font sizes */
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.375rem;
+  --fs-600: 1.75rem;
+  --fs-700: 2.25rem;
+}
+
+body{
+    background: var(--background);
+}
+
+nav {
+    display: grid;
+    justify-items: center;
+}
+
+nav > button 
+{
+    background-color: var(--button);
+    color: var(--main);
+}
+
+nav > input {
+    height: 10vh;
+    width: 10vh
+}
+
