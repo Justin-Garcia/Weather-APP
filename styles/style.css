@@ -1,18 +1,17 @@
-
-  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Eczar&family=Newsreader:opsz@6..72&family=Noto+Color+Emoji&family=Quicksand:wght@400;500;600&family=Roboto+Condensed:ital,wght@0,500;0,600;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Eczar&family=Newsreader:opsz@6..72&family=Noto+Color+Emoji&family=Quicksand:wght@400;500;600&family=Roboto+Condensed:ital,wght@0,500;0,600;1,400&display=swap");
 
 :root {
   /* colors */
-  --background: #dad7cdff;
+  --background2: #dad7cdff;
+  --background: #e1ded5ff;
   --accent: #588157ff;
   --main: #344e41ff;
   --borders: #a3b18aff;
   --button: #d9926bff;
   --secondary-accent: #3a5a40ff;
 
-
   /* font families */
-  --ff-base: "Roboto Condensed", sans-serif;
+  --ff-main: "Roboto Condensed", sans-serif;
   --ff-accent: "Quicksand", sans-serif;
 
   /* font weight */
@@ -28,23 +27,88 @@
   --fs-700: 2.25rem;
 }
 
-body{
-    background: var(--background);
+* {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  background: var(--background);
+  margin: 2rem;
+  align-items: center;
+}
+
+/* Nav Bar Customization */
 nav {
-    display: grid;
-    justify-items: center;
+  background-color: var(--background2);
+  margin: 0rem;
 }
 
-nav > button 
-{
-    background-color: var(--button);
-    color: var(--main);
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-nav > input {
-    height: 10vh;
-    width: 10vh
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
 }
 
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Scrolling Weather Data Customization */
+.scroller {
+  border: black 3px solid;
+  outline: 3px solid lime;
+  height: 40px;
+}
+
+.scroller__inner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.scroller__inner > li {
+    background-color: var(--accent);
+    border-radius: 8px;
+    list-style: none;
+    /* box-shadow: 0 0.5rem .5rem 0 var(--main); */
+    width: 4rem;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+  }
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white,
+    white 80%,
+    transparent
+  );
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  flex-wrap: nowrap;
+  animation: scroll 40s linear infinite;
+}
+/* scroller animations */
+@keyframes scroll {
+  to {
+    transform: translate(100%);
+  }
+}

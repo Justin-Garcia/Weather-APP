@@ -2,6 +2,8 @@
 const apiKey = "31ebe040d9ce338865ece410970e4edd"
 
 
+// TODO: Register the search button click as submit, prevent default, have the input wiped out as the page is updated
+
 // TODO: Create fetch to translate city/location input to longitude - latitude input for openWeatherMap API
 
 function search(location) {
@@ -14,4 +16,5 @@ function search(location) {
 }
 
 // TODO: Create fetch request for Temp, Precip, Humidity, Weather
+
 

@@ -7,30 +7,47 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-    <nav class="columns">
-      <div class="column1"></div>
-      <div class="column2">
+    <nav>
+      <div>
         <input type="text" placeholder="Search..." />
         <button class="button" type="submit">?</button>
       </div>
-      <div class="column3"><div class="dropdownMenu">Favorites</div></div>
+      <div class="dropdown">
+        Favorites
+        <div class="dropdown-content">
+          <ul>
+            <li>Test City</li>
+            <li>Test City</li>
+            <li>Test City</li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    <!-- TODO: Create rotating weather icons  -->
-    <div class="container">
-      <div class="wrapper"></div>
-    </div>
 
-    <div class="container | columns">
-      <div class="column1">
+    <!-- TODO: Create rotating weather icons  -->
+    <div class="scroller" data-animated="true">
+      <ul class="scroller__inner">
+        <li>Day 1</li>
+        <li>Day 2</li>
+        <li>Day 3</li>
+        <li>Day 4</li>
+        <li>Day 5</li>
+        <li>Day 6</li>
+        <li>Day 7</li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="cards>
+      <div class="card1">
         <h1>Weather</h1>
         <img src="" alt="Current Weather" />
         <!--Update this to change via JS-->
-        <h2>Degrees</h2>
+        <h2><span id="degrees"></span></h2>
         <!--Update this to change via JS-->
-        <p>Filler Text</p>
+        <p>Feels Like:<span id="feelsLike"></span></p>
         <!--Update this to change via JS-->
       </div>
-      <div class="column2">
+      <div class="card2">
         <h1>Precipitation</h1>
         <img src="" alt="Precipitation Chart" />
         <h2>Precipitation Type</h2>
