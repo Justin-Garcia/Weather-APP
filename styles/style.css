@@ -25,6 +25,7 @@
   --fs-500: 1.375rem;
   --fs-600: 1.75rem;
   --fs-700: 2.25rem;
+  --fs-numbers: 5rem;
 }
 
 * {
@@ -44,11 +45,43 @@ body {
 nav {
   background-color: var(--background2);
   margin: 0rem;
+  font-family: var(--ff-main);
+  font-size: var(--fs-400);
+  display: flex;
+  flex-basis: auto;
+  height: 5vh;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#inputSearch {
+  height: 1.5rem;
+  border: none;
+  border-radius: 100px;
+}
+
+#inputSearch::placeholder {
+padding-left: 10px;
+}
+
+#searchBtn {
+  background-color: var(--button);
+  border-radius: 100px;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: none;
+}
+#searchBtn:active {
+filter: brightness(90%);
 }
 
 .dropdown {
   position: relative;
   display: inline-block;
+}
+
+.dropdown:hover {
+  cursor: pointer;
 }
 
 .dropdown-content {
@@ -63,13 +96,14 @@ nav {
 
 .dropdown:hover .dropdown-content {
   display: block;
+  cursor: pointer;
 }
 
 /* Scrolling Weather Data Customization */
 .scroller {
-  border: black 3px solid;
-  outline: 3px solid lime;
-  height: 40px;
+  border: var(--background2) 3px solid;
+  height: 50px;
+  font-family: var(--ff-accent);
 }
 
 .scroller__inner {
@@ -80,15 +114,16 @@ nav {
 }
 
 .scroller__inner > li {
-    background-color: var(--accent);
-    border-radius: 8px;
-    list-style: none;
-    /* box-shadow: 0 0.5rem .5rem 0 var(--main); */
-    width: 4rem;
-    text-align: center;
-    align-items: center;
-    align-self: center;
-  }
+  background-color: var(--accent);
+  border-radius: 4px;
+  list-style: none;
+  height: 1.5rem;
+  box-shadow: 0 0.125rem 0.75rem 0 var(--secondary-accent);
+  width: 8rem;
+  text-align: center;
+  align-items: center;
+  align-self: center;
+}
 
 .scroller[data-animated="true"] {
   overflow: hidden;
@@ -104,11 +139,63 @@ nav {
 
 .scroller[data-animated="true"] .scroller__inner {
   flex-wrap: nowrap;
-  animation: scroll 40s linear infinite;
+  animation: scroll 30s linear infinite;
 }
 /* scroller animations */
 @keyframes scroll {
   to {
     transform: translate(100%);
   }
+}
+
+/* Weather Card Customization */
+.cards {
+  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* .card {
+    height: 50vh;
+    min-width: 50vh;
+    background-color: var(--accent);
+    background: op;
+    font-family: var(--ff-main);
+    text-align: center;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    background: rgba(39, 39, 39, 0.1);
+} */
+.card {
+  height: 300px;
+  width: 500px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  color: #fff;
+  background: rgba(39, 39, 39, 0.1);
+  backdrop-filter: (39, 39, 39, 0.1);
+  /* fallback for old browsers */
+  -webkit-backdrop-filter: blur(60px);
+  border: 2px solid rgba(3, 69, 14, 0.05);
+  box-shadow: 0 0 80px rgba(58, 90, 64, 0.5);
+}
+
+.card > h1 {
+  font-size: var(--fs-600);
+}
+
+.card > h2 {
+  font-size: var(--fs-500);
+  font-family: var(--ff-accent);
+}
+
+#degrees {
+    font-size: var(--fs-numbers);
+    font-weight: var(--fw-bold);
 }

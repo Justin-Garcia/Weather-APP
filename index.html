@@ -9,8 +9,8 @@
   <body>
     <nav>
       <div>
-        <input type="text" placeholder="Search..." />
-        <button class="button" type="submit">?</button>
+        <input type="text" placeholder="Search..." id="inputSearch"/>
+        <button class="button" type="submit" id="searchBtn">?</button>
       </div>
       <div class="dropdown">
         Favorites
@@ -37,20 +37,20 @@
       </ul>
     </div>
     <div class="container">
-      <div class="cards>
-      <div class="card1">
+      <div class="cards">
+      <div class="card weather">
         <h1>Weather</h1>
         <img src="" alt="Current Weather" />
         <!--Update this to change via JS-->
-        <h2><span id="degrees"></span></h2>
+        <h2><span id="degrees">34</span></h2>
         <!--Update this to change via JS-->
-        <p>Feels Like:<span id="feelsLike"></span></p>
+        <h2>Feels Like:<span id="feelsLike"></span></h2>
         <!--Update this to change via JS-->
       </div>
-      <div class="card2">
+      <div class="card precipitation ">
         <h1>Precipitation</h1>
         <img src="" alt="Precipitation Chart" />
-        <h2>Precipitation Type</h2>
+        <h2 id="precipitation">Precipitation Type</h2>
         <!--Update this to change via JS-->
       </div>
     </div>
