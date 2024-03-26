@@ -44,6 +44,7 @@ function displayWeather(data) {
     card.className = 'scroller__item';
     card.innerHTML = `
     <p>${current.main.temp}°F</p>
+    <img id="wicon" src="https://openweathermap.org/img/wn/${current.weather[0].icon}@2x.png" alt="">
                 `;
     forecastDiv.appendChild(card);
     }
