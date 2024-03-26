@@ -16,9 +16,10 @@
         Favorites
         <div class="dropdown-content">
           <ul>
-            <li>Test City</li>
-            <li>Test City</li>
-            <li>Test City</li>
+            <!-- TODO: Add JS functionallity to transfer the list item text content into the search field and populate the data onto the webpage (without refreshing) -->
+            <li>New York</li>
+            <li>Miami</li>
+            <li>Los Angeles</li>
           </ul>
         </div>
       </div>
@@ -26,31 +27,21 @@
 
     <!-- TODO: Create rotating weather icons  -->
     <div class="scroller" data-animated="true">
-      <ul class="scroller__inner">
-        <li>Day 1</li>
-        <li>Day 2</li>
-        <li>Day 3</li>
-        <li>Day 4</li>
-        <li>Day 5</li>
-        <li>Day 6</li>
-        <li>Day 7</li>
+      <ul id="scroller__inner">
       </ul>
     </div>
     <div class="container">
       <div class="cards">
-      <div class="card weather">
+      <div class="card" id="weather">
         <h1>Weather</h1>
-        <img src="" alt="Current Weather" />
-        <!--Update this to change via JS-->
-        <h2><span id="degrees">34</span></h2>
-        <!--Update this to change via JS-->
-        <h2>Feels Like:<span id="feelsLike"></span></h2>
-        <!--Update this to change via JS-->
+        <!-- <img src="" alt="Current Weather" /> -->
+        
       </div>
-      <div class="card precipitation ">
-        <h1>Precipitation</h1>
+      <div class="card" id="additionalInfo">
+        <h1>Additional Info</h1>
+        <!-- <h1>Precipitation</h1>
         <img src="" alt="Precipitation Chart" />
-        <h2 id="precipitation">Precipitation Type</h2>
+        <h2 id="precipitation">Precipitation Type</h2> -->
         <!--Update this to change via JS-->
       </div>
     </div>

@@ -58,9 +58,6 @@ nav {
   height: 1.5rem;
   border: none;
   border-radius: 100px;
-}
-
-#inputSearch::placeholder {
 padding-left: 10px;
 }
 
@@ -106,20 +103,20 @@ filter: brightness(90%);
   font-family: var(--ff-accent);
 }
 
-.scroller__inner {
+#scroller__inner {
   padding-block: 1rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
 
-.scroller__inner > li {
+.scroller__item {
   background-color: var(--accent);
   border-radius: 4px;
   list-style: none;
   height: 1.5rem;
   box-shadow: 0 0.125rem 0.75rem 0 var(--secondary-accent);
-  width: 8rem;
+  width: clamp(20rem, 30rem);
   text-align: center;
   align-items: center;
   align-self: center;
@@ -137,7 +134,7 @@ filter: brightness(90%);
   );
 }
 
-.scroller[data-animated="true"] .scroller__inner {
+.scroller[data-animated="true"] #scroller__inner {
   flex-wrap: nowrap;
   animation: scroll 30s linear infinite;
 }
@@ -187,7 +184,9 @@ filter: brightness(90%);
 }
 
 .card > h1 {
-  font-size: var(--fs-600);
+  font-size: var(--fs-numbers);
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-accent);
 }
 
 .card > h2 {
@@ -195,7 +194,15 @@ filter: brightness(90%);
   font-family: var(--ff-accent);
 }
 
-#degrees {
+#degrees, #additionalInfo > h1 {
     font-size: var(--fs-numbers);
     font-weight: var(--fw-bold);
+    font-family: var(--ff-accent);
+}
+
+
+#wicon {
+  width: 100px;
+  height: 100px;
+ margin-left: 38%;
 }
